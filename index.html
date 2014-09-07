@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>iWay</title>
+        <meta name="description" content="iWay">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="vender/modernizr/modernizr.js"></script>
+	</head>
+	<body>
+        <!-- skin -->
+        <div class="skin" style="background-color:rgb(64, 64, 64);background-image:url('images/skin1.jpg');"></div>
+        
+		<!-- navbar start -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#~/home">
+                        iWay <span class="glyphicon glyphicon-heart" style="color:#6228A0;font-size:20px;"></span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#~/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li><a href="#~/timeline"><span class="glyphicon glyphicon-time"></span> Timeline</a></li>
+                        <li><a href="#~/article"><span class="glyphicon glyphicon-list"></span> Article</a></li>
+                        <li><a href="#~/show"><span class="glyphicon glyphicon-picture"></span> Show</a></li>
+                        <li><a href="#~/about"><span class="glyphicon glyphicon-user"></span> About</a></li>
+                        <li><a href="#~/about"><span class="glyphicon glyphicon-envelope"></span> Message</a></li>
+                        <li>
+                            <!--<div class="dropdown">
+                                  <a data-toggle="dropdown" href="#" style="color:#e9e9e9;font-size:16px;">
+                                        <span class="username"><small>个人中心</small></span>
+                                        <b class="caret caret-inverse"></b>
+                                  </a>
+                                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <li><a href="#~">个人资料</a></li>
+                                        <li><a href="#">注销</a></li>
+                                  </ul>-->
+                            </div>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+    	</div>
+        <!-- navbar end -->
+
+		<div style="margin-top:50px;"></div>
+
+		<div ng-view></div>
+            
+        <!-- spin -->
+        <div id="foo" style="display:none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: #000000; opacity:0.6;filter: alpha(opacity=60);" >
+            <div id="spin" style="position:fixed; top: 45%; left:45%;color:white;"></div>
+        </div>
+         
+        <script src="vender/spin.js"></script>
+		<!-- import main js-->
+		<script src="vender/requirejs/require.js" data-main="scripts/requirejs-config"></script>
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            // e.src='//www.google-analytics.com/analytics.js';
+            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            // ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        	
+        <script>
+        	var opts = {
+                lines: 12, // The number of lines to draw
+                length: 7, // The length of each line
+                width: 5, // The line thickness
+                radius: 10, // The radius of the inner circle
+                color: '#ffffff', // #rbg or #rrggbb
+                speed: 1, // Rounds per second
+                trail: 100, // Afterglow percentage
+                shadow: true // Whether to render a shadow
+            };
+            var target = document.getElementById('spin');
+            var spinner = new Spinner(opts).spin(target);
+        </script>
+	</body>
+</html>
