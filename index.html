@@ -1,79 +1,95 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8">
+        <title>iWay</title>
+        <meta name="description" content="iWay">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="vender/modernizr/modernizr.js"></script>
+	</head>
+	<body>
+        <!-- skin -->
+        <div class="skin" style="background-color:rgb(64, 64, 64);background-image:url('images/skin1.jpg');"></div>
+        
+		<!-- navbar start -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#~/home">
+                        iWay <span class="glyphicon glyphicon-heart" style="color:#6228A0;font-size:20px;"></span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#~/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li><a href="#~/timeline"><span class="glyphicon glyphicon-time"></span> Timeline</a></li>
+                        <li><a href="#~/article"><span class="glyphicon glyphicon-list"></span> Article</a></li>
+                        <li><a href="#~/show"><span class="glyphicon glyphicon-picture"></span> Show</a></li>
+                        <li><a href="#~/about"><span class="glyphicon glyphicon-user"></span> About</a></li>
+                        <li><a href="#~/about"><span class="glyphicon glyphicon-envelope"></span> Message</a></li>
+                        <li>
+                            <!--<div class="dropdown">
+                                  <a data-toggle="dropdown" href="#" style="color:#e9e9e9;font-size:16px;">
+                                        <span class="username"><small>个人中心</small></span>
+                                        <b class="caret caret-inverse"></b>
+                                  </a>
+                                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <li><a href="#~">个人资料</a></li>
+                                        <li><a href="#">注销</a></li>
+                                  </ul>-->
+                            </div>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+    	</div>
+        <!-- navbar end -->
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Iway : I always on the way.">
+		<div style="margin-top:50px;"></div>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<div ng-view></div>
+            
+        <!-- spin -->
+        <div id="foo" style="display:none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: #000000; opacity:0.6;filter: alpha(opacity=60);" >
+            <div id="spin" style="position:fixed; top: 45%; left:45%;color:white;"></div>
+        </div>
+         
+        <script src="vender/spin.js"></script>
+		<!-- import main js-->
+		<script src="vender/requirejs/require.js" data-main="scripts/requirejs-config"></script>
 
-    <title>Iway</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/s9013/iway">View on GitHub</a>
-
-          <h1 id="project_title">Iway</h1>
-          <h2 id="project_tagline">I always on the way.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/s9013/iway/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/s9013/iway/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Iway maintained by <a href="https://github.com/s9013">s9013</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            // e.src='//www.google-analytics.com/analytics.js';
+            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            // ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        	
+        <script>
+        	var opts = {
+                lines: 12, // The number of lines to draw
+                length: 7, // The length of each line
+                width: 5, // The line thickness
+                radius: 10, // The radius of the inner circle
+                color: '#ffffff', // #rbg or #rrggbb
+                speed: 1, // Rounds per second
+                trail: 100, // Afterglow percentage
+                shadow: true // Whether to render a shadow
+            };
+            var target = document.getElementById('spin');
+            var spinner = new Spinner(opts).spin(target);
+        </script>
+	</body>
 </html>

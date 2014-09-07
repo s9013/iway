@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"title": "Be Yourself",
+		"date": "2014-1-1",
+		"summary":"<p>请不要让生活磨平你的棱角！Please be Yourself. Any time Anywhere.</p>",
+		"content": "<p>请不要让生活磨平你的棱角！</p><p>Please be Yourself. Any time Anywhere.</p><p>......</p>"
+	},
+	{
+		"id": 2,
+		"title": "How to do",
+		"date": "2014-6-28",
+		"summary":"<p>How to do</p>",
+		"content": "<p>How to do</p><p>......</p>"
+	},
+	{
+		"id": 3,
+		"title": "唉",
+		"date": "2014-7-2",
+		"summary":"<p>水平太菜了</p>",
+		"content": "<p>水平太菜了</p><p>慢慢积累吧</p>"
+	}
+]
