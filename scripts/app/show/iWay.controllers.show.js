@@ -35,9 +35,9 @@ requirejs([
 				$.bridget( 'masonry', Masonry );
 				// now you can use $().masonry()
 				var html = '';
-				 var data = [1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3];
-			    for ( var i = 0; i < 20; i++ ) {
-			         html += '<div class="item"><div class="pic"><img src="images/muscle'+data[i]+'.jpg" > </div> <div class="text">hello! how are you ?</div>  </div>';
+				// var data = [1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3];
+			    for ( var i = 0; i < 33; i++ ) {
+			         html += '<div class="item"><div class="pic"><img src="images/muscle('+i+').jpg" > </div> <div class="text">hello! how are you ?</div>  </div>';
 			    }
 			    $('#container').html(html);
 			    $('#container').imagesLoaded( function(){
@@ -51,10 +51,10 @@ requirejs([
 			function addItems(){
 			      var elems = [];
 			      var fragment = document.createDocumentFragment();
-			      var data = [1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3];
+			      //var data = [1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3];
 
-			      for ( var i = 0; i < 20; i++ ) {
-			        var elem = $('<div class="item"><div class="pic"><img src="images/muscle'+data[i]+'.jpg" > </div> <div class="text">hello! how are you ?</div></div>')[0] //getItemElement();
+			      for ( var i = 0; i < 33; i++ ) {
+			        var elem = $('<div class="item"><div class="pic"><img src="images/muscle('+i+').jpg" > </div> <div class="text">hello! how are you ?</div></div>')[0] //getItemElement();
 			        fragment.appendChild( elem );
 			        elems.push( elem );
 			      }
