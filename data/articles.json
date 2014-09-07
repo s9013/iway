@@ -8,16 +8,9 @@
 	},
 	{
 		"id": 2,
-		"title": "How to do",
+		"title": "脸蛋是天生的，而身体是你选择的。",
 		"date": "2014-6-28",
-		"summary":"<p>How to do</p>",
-		"content": "<p>How to do</p><p>......</p>"
-	},
-	{
-		"id": 3,
-		"title": "唉",
-		"date": "2014-7-2",
-		"summary":"<p>水平太菜了</p>",
-		"content": "<p>水平太菜了</p><p>慢慢积累吧</p>"
+		"summary":"<p>脸蛋是天生的，而身体是你选择的。</p>",
+		"content": "<p>脸蛋是天生的，而身体是你选择的。</p><p>......</p>"
 	}
 ]
