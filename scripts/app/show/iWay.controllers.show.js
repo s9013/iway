@@ -37,7 +37,7 @@ requirejs([
 				var html = '';
 				// var data = [1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3];
 			    for ( var i = 0; i < 33; i++ ) {
-			         html += '<div class="item"><div class="pic"><img src="images/muscle('+i+').jpg" > </div> <div class="text">hello! how are you ?</div>  </div>';
+			         html += '<div class="item"><div class="pic"><img src="images/muscle ('+i+').jpg" > </div> <div class="text">hello! how are you ?</div>  </div>';
 			    }
 			    $('#container').html(html);
 			    $('#container').imagesLoaded( function(){
@@ -54,7 +54,7 @@ requirejs([
 			      //var data = [1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3];
 
 			      for ( var i = 0; i < 33; i++ ) {
-			        var elem = $('<div class="item"><div class="pic"><img src="images/muscle('+i+').jpg" > </div> <div class="text">hello! how are you ?</div></div>')[0] //getItemElement();
+			        var elem = $('<div class="item"><div class="pic"><img src="images/muscle ('+i+').jpg" > </div> <div class="text">hello! how are you ?</div></div>')[0] //getItemElement();
 			        fragment.appendChild( elem );
 			        elems.push( elem );
 			      }
